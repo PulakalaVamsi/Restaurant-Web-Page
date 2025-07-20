@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #333;
+      
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+    }
+    .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #eb4e05;
+      text-shadow:-1px -1px 0 #000, 2px -2px 0 #000,1px -1px 0 #000, 1px -1px 0 #000,  ;
+    }
+    nav a {
+      margin-left: 1.3rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #eb4e05;
+    }
+    .hero {
+      background: url('https://as2.ftcdn.net/jpg/02/92/20/37/1000_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      border-radius: 20px;
+      
+    }
+
+
+    
+    .hero-content h1 {
+      font-size: 4rem;
+      font-weight: 500;
+      margin: 0;
+      position: absolute;
+      top: 45%;
+      bottom: 50%;
+      transform: translate(130%);
+      text-align: center;
+      color: #d83d00d7;
+      border-radius: 10px;
+      text-shadow: -2px -2px 0 #f7f4f4, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    }
+    .hero-content p {
+      font-size: 2rem;
+      font-weight: 300;
+      position: absolute;
+      top: 60%;
+      bottom: 40%;
+      transform: translate(75%);
+      margin: 0;
+      color: #dfd9d9d7;
+      text-shadow: -2px -2px 0 #f74802
+        2px -2px 0 #f74802,
+        -2px 2px 0 #f13d06,
+         2px 2px 0 #f13d06;
+    }
+    .feature h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin: 1rem 0;
+      color: #eceae7;
+      text-shadow: -1px -1px 0 #000, 
+                    1px -2px 0 #000;
+      background-color: #eb4e05;
+    }
+    .blocks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .block {
+      width: 300px;
+      background: #f0eeee;
+      box-sizing: border-box;
+      padding: 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .block img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      height: 220px;
+    }
+    .block h3 {
+      text-align: center;
+      color: #131212;
+    }
+    .veg h3.heading {
+      text-align: center;
+      font-size: 2rem;
+      margin: 1rem 0;
+      color: #eceae7;
+      text-shadow: -1px -1px 0 #000, 
+            1px -2px 0 #000;
+      background-color: #eb4e05;
+    }
+    .veg-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .veg-item {
+      text-align: center;
+      width: 150px;
+    }
+    .veg-item img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #eb4e05;
+    }
+    .veg-item h3 {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #333;
+    }
+    .aboutt h3.header{
+      text-align: center;
+      font-size: 2rem;
+      margin: 1rem ;
+      color: #eceae7;
+      text-shadow: -1px -1px 0 #000, 
+            1px -2px 0 #000;
+      background-color: #eb4e05;
+
+    }
+    .about-content {
+      width: 100%;
+      background: #fffefe;
+      box-sizing: border-box;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      justify-content: center;
+      
+    }
+  .about-img {
+  text-align: center; 
+  width: 100%;
+}
+
+.about-img img {
+  display: inline-block;
+  width: 80%;  
+  border-radius: 5px;
+}
+.about-container{
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+    .tablebooking h3 header{
+      text-align: center;
+      font-size: 2rem;
+      margin: 1rem 0;
+      color: #eceae7;
+      text-shadow: -1px -1px 0 #000, 
+            1px -2px 0 #000;
+      background-color: #eb4e05;
+      padding: 1rem;
+    }
+.tables {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      
+    }
+ 
+
+    .booking-wrapper {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 600px;
+    }
+        h3.header {
+      background-color: #eb4e05;
+      color: white;
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      border-radius: 5px 5px 0 0;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000;
+    }
+
+    .booking-text h4 {
+      font-size: 1.8rem;
+      color: #eb4e05;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .booking-text p {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #666;
+    }
+
+    .form-container label {
+      font-weight: bold;
+    }
+
+    .form-container input,
+    .form-container button {
+      width: 95%;
+      padding: 10px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-container button {
+      background-color: #eb4e05;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #c93c03;
+    }
+    .contactus h3.header{
+      background-color: #eb4e05;
+      color: white;
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      border-radius: 5px 5px 0 0;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000;
+
+    }
+  
+
+.contact-section {
+      padding: 60px 80px;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .contact-header h1 {
+      font-size: 50px;
+      color: #e64c06;
+      text-shadow:-1px -1px 0 #0e0d0df8, 1px -1px 0 #0a0a0af8;;
+    }
+
+    .contact-header p {
+      font-size: 20px;
+      color: #0c0c0c;
+      margin-top: 10px;
+    }
+
+    .contact-container {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .contact-info {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .info-box {
+      background-color: #f6f6f6;
+      padding: 40px;
+      margin: 0%;
+      border-radius: 10px;
+
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .info-box img {
+      width: 40px;
+      height:40px
+    }
+
+    .info-box h3 {
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+
+    .info-box p {
+      font-size: 14px;
+      color: #444;
+      bottom: 0;
+    }
+
+    .contact-form {
+      flex: 1;
+      background-color: #fff;
+    }
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #222;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .contact-form button {
+      background-color: #d77d2b;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #c96b1e;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+
+      .contact-info {
+        grid-template-columns: 1fr;
+      }
+    }
+    .footer {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 50px 80px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social {
+  flex: 1 1 200px;
+}
+
+.footer h2,
+.footer h3 {
+  margin-bottom: 20px;
+  color: #ec7a00;
+}
+
+.footer p,
+.footer li,
+.footer a {
+  color: #ddd;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Saffron Courtyard</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#resturant">Resturant</a>
+      <a href="#Delights">Delights</a>
+      <a href="#about">About</a>
+      <a href="#table">Table Booking</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Royal Ember</h1>
+      <p>"Crafted with love, served with pride.."</p>
+    </div>
+  </section>
+  <section class="feature" id="resturant">
+    <h2>Resturant View</h2>
+    <div class="blocks">
+      <div class="block">
+        <img src="https://i.postimg.cc/02dyQtcr/restaurant-background.jpg" alt="Resturant">
+        <h3>Resturant</h3>
+      </div>
+      <div class="block">
+        <img src="https://i.postimg.cc/MGS0Mmsy/washing-area.jpg" alt="Washing">
+        <h3>Washing</h3>
+      </div>
+      <div class="block">
+        <img src="https://i.postimg.cc/C13xZX3n/kitchen.jpg" alt="Kitchen">
+        <h3>Kitchen</h3>
+      </div>
+      <div class="block">
+        <img src="https://i.postimg.cc/1X1yR6Fp/terrors.jpg" alt="Terrace">
+        <h3>Terrace View</h3>
+      </div>
+      <div class="block">
+        <img src="https://i.postimg.cc/sgp7rZV1/outer-side.jpg" alt="Outer">
+        <h3>Outer Side View</h3>
+      </div>
+    </div>
+  </section>
+  <section class="veg" id="Delights">
+    <h3 class="heading">Delights</h3>
+    <div class="veg-container">
+      <div class="veg-item"><img src="https://i.postimg.cc/2jnzccpT/idly.jpg" alt="Idli">
+        <h3>Idli</h3>
+    </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/yYB7wmsK/dosaa.jpg" alt="Dosa">
+        <h3>Dosa</h3>
+    </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/J4qRmszk/purri.jpg" alt="Puri">
+        <h3>Puri</h3>
+    </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/bwV8D4bY/vada.jpg" alt="Vada">
+        <h3>Vada</h3>
+    </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/8CFGhwBR/sandwish.jpg" alt="Sandwiches">
+        <h3>Sandwiches</h3>
+    </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/fLmhPLPk/pizza.jpg" alt="Pizza">
+        <h3>Pizza</h3>
+    </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/FzvQXvtp/pav-bhaji.jpg" alt="Pav Bhaji">
+        <h3>Pav Bhaji</h3>
+    </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/cCcGsz0S/panipuri.jpg" alt="Pani Puri">
+        <h3>Pani Puri</h3>
+    </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/gkNbQ1gy/noodles.jpg" alt="Noodles">
+        <h3>Noodles</h3>
+    </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/y8G4Yc4k/mommos.jpg" alt="Momos">
+        <h3>Momos</h3>
+    </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/50ch8JtJ/jilibi.jpg" alt="Jalebi">
+        <h3>Jlebi</h3>
+    </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/G2kZQfBy/ice-cream.jpg" alt="Ice Cream">
+        <h3>Ice Cream</h3>
+    </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/J0xSwB57/gulabgam.jpg" alt="Gulab Jamun">
+        <h3>Gulab Jamun</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/7PnFJprv/meals.jpg" alt="Meals">
+        <h3>Meals</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/dVLpX3kv/baked-polenta-cakes-with-tomato-sauce-and-ricotta-hucc5xjthmvc4mqg.webp" alt="Polenta Cakes">
+        <h3>Polenta Cakes</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/kgzzdCKS/burger.jpg" alt="Burger">
+        <h3>Burger</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/bJj5sR6N/polenta-with-mushrooms-dish-xir73khldsx4fmx8.webp" alt="Polenta with Mushrooms">
+        <h3>Polenta With Mushrooms</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/bJj5sR6N/polenta-with-mushrooms-dish-xir73khldsx4fmx8.webp" alt="Cocktail Polenta">
+        <h3>Cocktail Polenta</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/sxTHHC3v/chilli-paneer.jpg" alt="Chilli Paneer">
+        <h3>Chilli Paneer</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/Nj3Jz4v7/soyabean-chilli.jpg" alt="Soyabean Chilli">
+        <h3>Soyabean Chilli</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/kXZf2cG3/mushroom.jpg" alt="Mushroom">
+        <h3>Mushroom</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/g2Z48ZLw/crab.jpg" alt="Crab">
+        <h3>Crab</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/vmwhzZ50/sea-food.jpg" alt="Sea Food">
+        <h3>Sea Food</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/jjhH4Qxj/fish.jpg" alt="Fish">
+        <h3>Fish</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/gJkvSXjH/roasted-chicken.jpg" alt="Roasted Chicken">
+        <h3>Roasted Chicken</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/4dLprfhk/mutton.jpg" alt="Mutton">
+        <h3>Mutton</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/QCFcD2pB/chicken-cuury.jpg" alt="Chicken Curry">
+        <h3>Chicken Curry</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/x8BM16R6/chicken-sticks.jpg" alt="Chicken Sticks">
+        <h3>Chicken Sticks</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/fWPxCbNY/dum-biryani.jpg" alt="Biryani">
+        <h3>Biryani</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.postimg.cc/sDZ5NRjq/tanduri.jpg" alt="Tandoori">
+        <h3>Tandoori</h3>
+      </div>
+      <div class="veg-item"><img src="https://i.pinimg.com/736x/8f/21/38/8f213838cb7a470b6141471b73ae4cf8.jpg" alt="Drinks">
+        <h3>Drinks</h3>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="aboutt" id="about">
+    <h3 class="header">About Us</h3>
+    <div class="about-content">
+      
+      <div class="about-img">
+        <img src="https://i.postimg.cc/wB9JMyXY/Adobe-Stock-624827354-Preview.jpg" alt>
+      </div>
+      <div class="about-container">
+        
+      <p>Welcome to <strong>Saffron Courtyard</strong>, where tradition meets taste. We take pride in serving handcrafted meals rooted in Indian heritage with a modern twist.
+      Founded by passionate food lovers, we believe in delivering authenticity, warmth, and unforgettable dining experiences.
+      Our mission is to serve not just food, but memories — plated with care, served with a smile.</p>
+      </div>
+
+    </div>
+
+  </section>
+  <section class="tablebooking" id="table">
+    <h3 class="header">Table Booking</h3>
+  </section>
+
+  <section class="tables" id="table">
+    <div class="tables">
+      <div class="booking-wrapper">
+        <div class="booking-text">
+      <h4>Reserve Your Table</h4>
+      <p>Experience royal dining with a simple booking. Please fill in your details to reserve your spot.</p>
+    </div>
+
+    <div class="form-container">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email">
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number">
+
+      <button type="submit">Book Now</button>
+    </div>
+  </div>
+</div>
+      </form>
+    </div>
+  </div>
+</section>
+  <section class="contact-section" id="contact">
+    <div class="contact-header">
+      <h1>Contact Us</h1>
+      <p> <p>We’re always happy to hear from our guests! Whether you want to book a table, order your favorite dish, give feedback, or just say hello — we’re here for you.</p>
+    <p>📞 Call us, 💬 WhatsApp us, or 📍 drop by our restaurant — we promise a warm welcome and fast support.</p>
+    <p>Your comfort and satisfaction are our top priorities. Let’s stay connected and make every meal memorable!</p>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="info-box">
+          <img src="https://i.postimg.cc/W33kmBY9/5068731.png" alt="Phone">
+          <h3>Phone</h3>
+          <p>207-8767-452</p>
+        </div>
+        <div class="info-box">
+          <img src="https://i.postimg.cc/yWq3Hk15/6422213.png" alt="WhatsApp">
+          <h3>Whatsapp</h3>
+          <p>082-123-234-345</p>
+        </div>
+        <div class="info-box">
+          <img src="https://i.postimg.cc/XNr24mNc/3916631.png" alt="Email">
+          <h3>Email</h3>
+          <p>support@yoursite.com</p>
+        </div>
+        <div class="info-box">
+          <img src="https://i.postimg.cc/c4YX83nv/3916862.png" alt="Shop">
+          <h3>Location</h3>
+          <p>2443 Oak Ridge Omaha, QA 45065</p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h2>Get In Touch</h2>
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Your email" required>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="Subject">
+
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Type here..." required></textarea>
+
+          <button type="submit">Send Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h2>Delight Dine</h2>
+      <p>Your taste, our passion. Serving fresh and delightful meals every day.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#resturant">Resturant</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#Delights">Delights</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>📞 207-8767-452</p>
+      <p>📍 123 Food Street, Flavor Town</p>
+      <p>✉️ contact@SaffronCourtyarddine.com</p>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <a href="#"><img src="https://i.postimg.cc/0ysZGNYc/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="https://i.postimg.cc/y8yjLznB/insta.png" alt="Instagram"></a>
+      <a href="#"><img src="https://i.postimg.cc/vBkt4887/twitter.png" alt="Twitter"></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Delight Dine. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
